@@ -1,4 +1,0 @@
-Running: xsim.dir/tb_hk_mash111_behav/xsimk -simmode gui -wdb tb_hk_mash111_behav.wdb -simrunnum 0 -socket 45725
-Design successfully loaded
-Design Loading Memory Usage: 33612 KB (Peak: 33732 KB)
-Design Loading CPU Usage: 20 ms
