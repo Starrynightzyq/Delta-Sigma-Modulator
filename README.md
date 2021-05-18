@@ -18,7 +18,19 @@ Delta-Sigma modulator (DSM) for fractional phase locked loop.
 
 ## Recommended parameter settings
 
-> *HK-MASH-DDSM/rtl/hk_mash111.v*
+**Traditional MASH DSM**
+
+> top: *HK-MASH-DDSM/rtl/hk_mash111.v*
+
+| parameter | value |
+| --------- | ----- |
+| WIDTH     | 9     |
+| A_GAIN    | 0     |
+| OUT_REG   | 1     |
+
+**HK-MASH DSM**
+
+> top: *HK-MASH-DDSM/rtl/hk_mash111.v*
 
 | parameter | value |
 | --------- | ----- |
@@ -26,7 +38,9 @@ Delta-Sigma modulator (DSM) for fractional phase locked loop.
 | A_GAIN    | 2     |
 | OUT_REG   | 1     |
 
-> *SP-MASH-DDSM/rtl/sp_mash111.v*
+**SP-MASH DSM**
+
+> top: *SP-MASH-DDSM/rtl/sp_mash111.v*
 
 | parameter | value |
 | --------- | ----- |
@@ -55,9 +69,9 @@ In *HK-MASH-DDSM/rtl/hk_mash111.v*, when parameter `A_GAIN` is not equal to `0`,
 
 The relationship between coefficient a and parameter `A_GAIN` in `hk_mash111` is shown in the following formula.
 
-$$
+~~~
 a = A_GAIN*2-1
-$$
+~~~
 
 Parameter detail:
 
@@ -85,7 +99,7 @@ So change the structure like this:
 
 ![SP-MASH-599](pic/SP-MASH-599.png)
 
-The input width of the first EFM is set to 5bit, other EFM input width is 9bit. Shift $e_1$ to the left by 4bits as the input of the second stage EFM.
+The input width of the first EFM is set to 5bit, other EFM input width is 9bit. Shift `e_1` to the left by 4bits as the input of the second stage EFM.
 
 Parameter detail:
 
