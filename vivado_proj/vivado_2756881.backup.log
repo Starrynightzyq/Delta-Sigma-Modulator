@@ -1,0 +1,454 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat May 15 23:46:38 2021
+# Process ID: 2756881
+# Current directory: /home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj
+# Command line: vivado dsm.xpr
+# Log file: /home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/vivado.log
+# Journal file: /home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project dsm.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hk_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_hk_mash111_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-1324] repetition multiplier must be positive [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:19]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_hk_mash111_behav -key {Behavioral:sim_1:Functional:tb_hk_mash111} -tclbatch {tb_hk_mash111.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_hk_mash111.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1ms
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 60
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_hk_mash111_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1ms
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hk_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_hk_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_hk_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.hk_efm(A_GAIN=2)
+Compiling module xil_defaultlib.mash111(A_GAIN=2)
+Compiling module xil_defaultlib.tb_hk_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_hk_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 60
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 7471.488 ; gain = 0.000 ; free physical = 503 ; free virtual = 4819
+close_project
+open_project /home/EDA/vsim/deblocking_filter/vivado_proj/test.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/EDA/vsim/deblocking_filter/vivado_proj/test.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: deblocking_filter
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:60]
+ERROR: [Synth 8-988] clog2 is already declared [/home/EDA/vsim/deblocking_filter/rtl/function.v:53]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:60]
+INFO: [Synth 8-2350] module data_o_mux ignored due to previous errors [/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v:4]
+Failed to read verilog '/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v'
+2 Infos, 2 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: deblocking_filter
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:60]
+ERROR: [Synth 8-988] funclog2 is already declared [/home/EDA/vsim/deblocking_filter/rtl/function.v:53]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:60]
+INFO: [Synth 8-2350] module data_o_mux ignored due to previous errors [/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v:4]
+Failed to read verilog '/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v'
+1 Infos, 2 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: deblocking_filter
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:60]
+ERROR: [Synth 8-988] funclog2 is already declared [/home/EDA/vsim/deblocking_filter/rtl/function.v:53]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:60]
+INFO: [Synth 8-2350] module data_o_mux ignored due to previous errors [/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v:4]
+Failed to read verilog '/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v'
+1 Infos, 2 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: deblocking_filter
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 7639.840 ; gain = 0.000 ; free physical = 741 ; free virtual = 5061
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'deblocking_filter' [/home/EDA/vsim/deblocking_filter/rtl/deblocking_filter.v:4]
+ERROR: [Synth 8-660] unable to resolve 'funclog2' [/home/EDA/vsim/deblocking_filter/rtl/deblocking_filter.v:25]
+ERROR: [Synth 8-6156] failed synthesizing module 'deblocking_filter' [/home/EDA/vsim/deblocking_filter/rtl/deblocking_filter.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7639.840 ; gain = 0.000 ; free physical = 787 ; free virtual = 5107
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: deblocking_filter
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:60]
+ERROR: [Synth 8-988] funclog2 is already declared [/home/EDA/vsim/deblocking_filter/rtl/function.v:53]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:60]
+INFO: [Synth 8-2350] module data_o_mux ignored due to previous errors [/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v:4]
+Failed to read verilog '/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v'
+1 Infos, 2 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: deblocking_filter
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:58]
+ERROR: [Synth 8-988] clogb2 is already declared [/home/EDA/vsim/deblocking_filter/rtl/function.v:53]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/EDA/vsim/deblocking_filter/rtl/function.v:58]
+INFO: [Synth 8-2350] module data_o_mux ignored due to previous errors [/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v:4]
+Failed to read verilog '/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v'
+1 Infos, 2 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: deblocking_filter
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 7881.883 ; gain = 0.000 ; free physical = 649 ; free virtual = 4971
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'deblocking_filter' [/home/EDA/vsim/deblocking_filter/rtl/deblocking_filter.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dual_ram' [/home/EDA/vsim/deblocking_filter/rtl/dual_ram.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dual_ram_ctrl' [/home/EDA/vsim/deblocking_filter/rtl/dual_ram_ctrl.v:4]
+	Parameter W1R2 bound to: 1'b0 
+	Parameter W2R1 bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'dual_ram_ctrl' (1#1) [/home/EDA/vsim/deblocking_filter/rtl/dual_ram_ctrl.v:4]
+WARNING: [Synth 8-7071] port 'pq_addr_o' of module 'dual_ram_ctrl' is unconnected for instance 'u_dual_ram_ctrl' [/home/EDA/vsim/deblocking_filter/rtl/dual_ram.v:34]
+WARNING: [Synth 8-7023] instance 'u_dual_ram_ctrl' of module 'dual_ram_ctrl' has 21 connections declared, but only 20 given [/home/EDA/vsim/deblocking_filter/rtl/dual_ram.v:34]
+INFO: [Synth 8-6157] synthesizing module 'true_dpram_sclk' [/home/EDA/vsim/deblocking_filter/rtl/true_dpram_sclk.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'true_dpram_sclk' (2#1) [/home/EDA/vsim/deblocking_filter/rtl/true_dpram_sclk.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dff_norst' [/home/EDA/vsim/deblocking_filter/rtl/dff_norst.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff_norst' (3#1) [/home/EDA/vsim/deblocking_filter/rtl/dff_norst.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'dual_ram' (4#1) [/home/EDA/vsim/deblocking_filter/rtl/dual_ram.v:4]
+INFO: [Synth 8-6157] synthesizing module 'data_mux' [/home/EDA/vsim/deblocking_filter/rtl/data_mux.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'data_mux' (5#1) [/home/EDA/vsim/deblocking_filter/rtl/data_mux.v:4]
+INFO: [Synth 8-6157] synthesizing module 'filter_switch' [/home/EDA/vsim/deblocking_filter/rtl/filter_switch.v:6]
+INFO: [Synth 8-6157] synthesizing module 'filter_switch_first' [/home/EDA/vsim/deblocking_filter/rtl/filter_switch_first.v:4]
+INFO: [Synth 8-6157] synthesizing module 'filter_switch_first_half' [/home/EDA/vsim/deblocking_filter/rtl/filter_switch_first_half.v:4]
+INFO: [Synth 8-6157] synthesizing module 'abs_sub' [/home/EDA/vsim/deblocking_filter/rtl/abs_sub.v:1]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'abs_sub' (6#1) [/home/EDA/vsim/deblocking_filter/rtl/abs_sub.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'filter_switch_first_half' (7#1) [/home/EDA/vsim/deblocking_filter/rtl/filter_switch_first_half.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'filter_switch_first' (8#1) [/home/EDA/vsim/deblocking_filter/rtl/filter_switch_first.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff_norst__parameterized0' [/home/EDA/vsim/deblocking_filter/rtl/dff_norst.v:4]
+	Parameter WIDTH bound to: 77 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff_norst__parameterized0' (8#1) [/home/EDA/vsim/deblocking_filter/rtl/dff_norst.v:4]
+INFO: [Synth 8-6157] synthesizing module 'filter_switch_second' [/home/EDA/vsim/deblocking_filter/rtl/filter_switch_second.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'filter_switch_second' (9#1) [/home/EDA/vsim/deblocking_filter/rtl/filter_switch_second.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff_async' [/home/EDA/vsim/deblocking_filter/rtl/dff_async.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff_async' (10#1) [/home/EDA/vsim/deblocking_filter/rtl/dff_async.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'filter_switch' (11#1) [/home/EDA/vsim/deblocking_filter/rtl/filter_switch.v:6]
+INFO: [Synth 8-6157] synthesizing module 'filter_path' [/home/EDA/vsim/deblocking_filter/rtl/filter_path.v:4]
+INFO: [Synth 8-6157] synthesizing module 'delay_filter' [/home/EDA/vsim/deblocking_filter/rtl/delay_fliter.v:4]
+	Parameter DELAY_TIMES bound to: 2 - type: integer 
+	Parameter WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff_norst__parameterized1' [/home/EDA/vsim/deblocking_filter/rtl/dff_norst.v:4]
+	Parameter WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff_norst__parameterized1' (11#1) [/home/EDA/vsim/deblocking_filter/rtl/dff_norst.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'delay_filter' (12#1) [/home/EDA/vsim/deblocking_filter/rtl/delay_fliter.v:4]
+INFO: [Synth 8-6157] synthesizing module 'normal_filter' [/home/EDA/vsim/deblocking_filter/rtl/normal_filter.v:5]
+INFO: [Synth 8-6157] synthesizing module 'delta' [/home/EDA/vsim/deblocking_filter/rtl/delta.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clip3' [/home/EDA/vsim/deblocking_filter/rtl/clip3.v:3]
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clip3' (13#1) [/home/EDA/vsim/deblocking_filter/rtl/clip3.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'delta' (14#1) [/home/EDA/vsim/deblocking_filter/rtl/delta.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dff_norst__parameterized2' [/home/EDA/vsim/deblocking_filter/rtl/dff_norst.v:4]
+	Parameter WIDTH bound to: 145 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff_norst__parameterized2' (14#1) [/home/EDA/vsim/deblocking_filter/rtl/dff_norst.v:4]
+INFO: [Synth 8-6157] synthesizing module 'normal_filter_logic' [/home/EDA/vsim/deblocking_filter/rtl/normal_filter_logic.v:4]
+INFO: [Synth 8-6157] synthesizing module 'clip3__parameterized0' [/home/EDA/vsim/deblocking_filter/rtl/clip3.v:3]
+	Parameter WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clip3__parameterized0' (14#1) [/home/EDA/vsim/deblocking_filter/rtl/clip3.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clip3__parameterized1' [/home/EDA/vsim/deblocking_filter/rtl/clip3.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clip3__parameterized1' (14#1) [/home/EDA/vsim/deblocking_filter/rtl/clip3.v:3]
+INFO: [Synth 8-6157] synthesizing module 'delta_p' [/home/EDA/vsim/deblocking_filter/rtl/delta_p.v:4]
+INFO: [Synth 8-6157] synthesizing module 'clip3__parameterized2' [/home/EDA/vsim/deblocking_filter/rtl/clip3.v:3]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clip3__parameterized2' (14#1) [/home/EDA/vsim/deblocking_filter/rtl/clip3.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'delta_p' (15#1) [/home/EDA/vsim/deblocking_filter/rtl/delta_p.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'normal_filter_logic' (16#1) [/home/EDA/vsim/deblocking_filter/rtl/normal_filter_logic.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'normal_filter' (17#1) [/home/EDA/vsim/deblocking_filter/rtl/normal_filter.v:5]
+INFO: [Synth 8-6157] synthesizing module 'strong_filter' [/home/EDA/vsim/deblocking_filter/rtl/strong_filter.v:5]
+INFO: [Synth 8-6157] synthesizing module 'strong_filter_one' [/home/EDA/vsim/deblocking_filter/rtl/strong_filter_one.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'strong_filter_one' (18#1) [/home/EDA/vsim/deblocking_filter/rtl/strong_filter_one.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'strong_filter' (19#1) [/home/EDA/vsim/deblocking_filter/rtl/strong_filter.v:5]
+INFO: [Synth 8-6157] synthesizing module 'data_o_mux' [/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v:4]
+	Parameter WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'data_o_mux_logic' [/home/EDA/vsim/deblocking_filter/rtl/data_o_mux_logic.v:4]
+	Parameter WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'data_o_mux_logic' (20#1) [/home/EDA/vsim/deblocking_filter/rtl/data_o_mux_logic.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'data_o_mux' (21#1) [/home/EDA/vsim/deblocking_filter/rtl/data_o_mux.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'filter_path' (22#1) [/home/EDA/vsim/deblocking_filter/rtl/filter_path.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'deblocking_filter' (23#1) [/home/EDA/vsim/deblocking_filter/rtl/deblocking_filter.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7881.883 ; gain = 0.000 ; free physical = 680 ; free virtual = 5004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7881.883 ; gain = 0.000 ; free physical = 676 ; free virtual = 4999
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7881.883 ; gain = 0.000 ; free physical = 676 ; free virtual = 4999
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 7881.883 ; gain = 0.000 ; free physical = 667 ; free virtual = 4991
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7996.723 ; gain = 0.000 ; free physical = 594 ; free virtual = 4919
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 8129.336 ; gain = 247.453 ; free physical = 522 ; free virtual = 4849
+60 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 8129.336 ; gain = 247.453 ; free physical = 522 ; free virtual = 4849
+close_project
+open_project /home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+add_files -scan_for_includes {/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v /home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -scan_for_includes /home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v
+update_compile_order -fileset sim_1
+set_property top sp_mash111 [current_fileset]
+update_compile_order -fileset sources_1
+set_property top tb_sp_mash111 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: sp_mash111
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 444 ; free virtual = 4915
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 472 ; free virtual = 4944
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 475 ; free virtual = 4946
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 475 ; free virtual = 4946
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 468 ; free virtual = 4939
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 407 ; free virtual = 4878
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 370 ; free virtual = 4842
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm_default
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim/xsim.dir/tb_sp_mash111_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:11 . Memory (MB): peak = 420.848 ; gain = 0.000 ; free physical = 264 ; free virtual = 4739
+INFO: [Common 17-206] Exiting Webtalk at Tue May 18 11:04:16 2021...
+run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 321 ; free virtual = 4796
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sp_mash111_behav -key {Behavioral:sim_1:Functional:tb_sp_mash111} -tclbatch {tb_sp_mash111.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_sp_mash111.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1ms
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 60
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_sp_mash111_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1ms
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 299 ; free virtual = 4779
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 8131.336 ; gain = 0.000 ; free physical = 1903 ; free virtual = 6400
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 18 12:28:07 2021...

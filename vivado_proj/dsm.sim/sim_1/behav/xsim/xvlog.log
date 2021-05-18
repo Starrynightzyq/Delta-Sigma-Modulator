@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ncl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_hk_mash111

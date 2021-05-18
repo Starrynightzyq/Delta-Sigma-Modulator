@@ -1,0 +1,2033 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May 18 13:35:08 2021
+# Process ID: 37346
+# Current directory: /home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj
+# Command line: vivado dsm.xpr
+# Log file: /home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/vivado.log
+# Journal file: /home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project dsm.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+set_property top hk_mash111 [current_fileset]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: hk_mash111
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 7380.758 ; gain = 0.000 ; free physical = 8871 ; free virtual = 12570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hk_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'hk_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'hk_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'hk_mash111' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7380.758 ; gain = 0.000 ; free physical = 8907 ; free virtual = 12606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7380.758 ; gain = 0.000 ; free physical = 8901 ; free virtual = 12599
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7380.758 ; gain = 0.000 ; free physical = 8901 ; free virtual = 12599
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7380.758 ; gain = 0.000 ; free physical = 8894 ; free virtual = 12593
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7444.707 ; gain = 0.000 ; free physical = 8820 ; free virtual = 12518
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 7540.379 ; gain = 159.621 ; free physical = 8723 ; free virtual = 12422
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 7540.379 ; gain = 159.695 ; free physical = 8723 ; free virtual = 12422
+set_property top tb_hk_mash111 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hk_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_hk_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_hk_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.hk_efm(A_GAIN=2,OUT_REG=1)
+Compiling module xil_defaultlib.hk_mash111
+Compiling module xil_defaultlib.tb_hk_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_hk_mash111_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim/xsim.dir/tb_hk_mash111_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim/xsim.dir/tb_hk_mash111_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue May 18 13:37:32 2021. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue May 18 13:37:32 2021...
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 7551.500 ; gain = 0.000 ; free physical = 8746 ; free virtual = 12446
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_hk_mash111_behav -key {Behavioral:sim_1:Functional:tb_hk_mash111} -tclbatch {tb_hk_mash111.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_hk_mash111.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1ms
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 62
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_hk_mash111_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1ms
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 7668.195 ; gain = 116.695 ; free physical = 8697 ; free virtual = 12400
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hk_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_hk_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_hk_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-1324] repetition multiplier must be positive [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:20]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.hk_efm(A_GAIN=0,OUT_REG=1)
+Compiling module xil_defaultlib.hk_mash111(A_GAIN=0)
+Compiling module xil_defaultlib.tb_hk_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_hk_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 62
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 7724.215 ; gain = 56.020 ; free physical = 8693 ; free virtual = 12394
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hk_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_hk_mash111_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-1324] repetition multiplier must be positive [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:20]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 62
+set_property top sp_mash111 [current_fileset]
+set_property top tb_sp_mash111 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 7729.117 ; gain = 4.902 ; free physical = 8462 ; free virtual = 12168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7759.086 ; gain = 34.871 ; free physical = 8508 ; free virtual = 12214
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7774.930 ; gain = 50.715 ; free physical = 8510 ; free virtual = 12216
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7774.930 ; gain = 50.715 ; free physical = 8510 ; free virtual = 12216
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7782.434 ; gain = 0.000 ; free physical = 8567 ; free virtual = 12272
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 7806.445 ; gain = 0.000 ; free physical = 8395 ; free virtual = 12113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7806.445 ; gain = 0.000 ; free physical = 8443 ; free virtual = 12161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7806.445 ; gain = 0.000 ; free physical = 8442 ; free virtual = 12161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7806.445 ; gain = 0.000 ; free physical = 8442 ; free virtual = 12161
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7806.445 ; gain = 0.000 ; free physical = 8518 ; free virtual = 12236
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(OUT_REG=1)
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 62
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 62
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 62
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sp_mash111_behav -key {Behavioral:sim_1:Functional:tb_sp_mash111} -tclbatch {tb_sp_mash111.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_sp_mash111.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1ms
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 60
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_sp_mash111_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1ms
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 60
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 60
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm_default
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 60
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 7878.469 ; gain = 0.000 ; free physical = 8223 ; free virtual = 11949
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+WARNING: [Synth 8-689] width (9) of port connection 'x_i' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [Synth 8-689] width (9) of port connection 'e_o' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm__parameterized0' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7878.469 ; gain = 0.000 ; free physical = 8284 ; free virtual = 12009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7878.469 ; gain = 0.000 ; free physical = 8282 ; free virtual = 12008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7878.469 ; gain = 0.000 ; free physical = 8282 ; free virtual = 12008
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7878.469 ; gain = 0.000 ; free physical = 8372 ; free virtual = 12097
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 7880.406 ; gain = 0.000 ; free physical = 8287 ; free virtual = 12013
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+WARNING: [Synth 8-689] width (9) of port connection 'x_i' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [Synth 8-689] width (9) of port connection 'e_o' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm__parameterized0' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7880.406 ; gain = 0.000 ; free physical = 8332 ; free virtual = 12058
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7880.406 ; gain = 0.000 ; free physical = 8330 ; free virtual = 12056
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7880.406 ; gain = 0.000 ; free physical = 8330 ; free virtual = 12056
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7885.406 ; gain = 0.000 ; free physical = 8406 ; free virtual = 12132
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 7924.422 ; gain = 44.016 ; free physical = 8331 ; free virtual = 12057
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5)
+Compiling module xil_defaultlib.sp_efm_default
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 61
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5)
+Compiling module xil_defaultlib.sp_efm_default
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 58
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5)
+Compiling module xil_defaultlib.sp_efm_default
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 58
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5)
+Compiling module xil_defaultlib.sp_efm_default
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 58
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5)
+Compiling module xil_defaultlib.sp_efm_default
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 58
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5)
+Compiling module xil_defaultlib.sp_efm_default
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 58
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5)
+Compiling module xil_defaultlib.sp_efm_default
+Compiling module xil_defaultlib.sp_mash111
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 58
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 58
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5,OUT_REG=1)
+Compiling module xil_defaultlib.sp_efm(OUT_REG=1)
+Compiling module xil_defaultlib.sp_mash111(OUT_REG=1)
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 60
+add_files -norecurse -scan_for_includes /home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v
+update_compile_order -fileset sources_1
+set_property top ncl [current_fileset]
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8002.469 ; gain = 0.000 ; free physical = 8243 ; free virtual = 11969
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8006.461 ; gain = 3.992 ; free physical = 8288 ; free virtual = 12013
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8021.305 ; gain = 18.836 ; free physical = 8285 ; free virtual = 12011
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8021.305 ; gain = 18.836 ; free physical = 8285 ; free virtual = 12011
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8030.309 ; gain = 0.000 ; free physical = 8388 ; free virtual = 12113
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8096.344 ; gain = 0.000 ; free physical = 8258 ; free virtual = 11984
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8096.344 ; gain = 0.000 ; free physical = 8296 ; free virtual = 12022
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8096.344 ; gain = 0.000 ; free physical = 8300 ; free virtual = 12026
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8096.344 ; gain = 0.000 ; free physical = 8300 ; free virtual = 12026
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8102.344 ; gain = 0.000 ; free physical = 8354 ; free virtual = 12080
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8134.359 ; gain = 0.000 ; free physical = 8257 ; free virtual = 11983
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8134.359 ; gain = 0.000 ; free physical = 8294 ; free virtual = 12020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8134.359 ; gain = 0.000 ; free physical = 8295 ; free virtual = 12021
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8134.359 ; gain = 0.000 ; free physical = 8295 ; free virtual = 12021
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8134.359 ; gain = 0.000 ; free physical = 8368 ; free virtual = 12094
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8160.375 ; gain = 0.000 ; free physical = 8253 ; free virtual = 11979
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8160.375 ; gain = 0.000 ; free physical = 8293 ; free virtual = 12019
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8160.375 ; gain = 0.000 ; free physical = 8292 ; free virtual = 12019
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8160.375 ; gain = 0.000 ; free physical = 8292 ; free virtual = 12019
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8165.371 ; gain = 0.000 ; free physical = 8361 ; free virtual = 12088
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8277.434 ; gain = 0.000 ; free physical = 8239 ; free virtual = 11966
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+ERROR: [Synth 8-439] module 'dff' not found [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:32]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000001000 
+	Parameter WITH_RST bound to: 32'sb00000000000000000000000000000000 
+	Parameter RST_VALUE bound to: 32'sb00000000000000000000000000000000 
+ERROR: [Synth 8-6156] failed synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8277.434 ; gain = 0.000 ; free physical = 8282 ; free virtual = 12009
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+add_files -norecurse -scan_for_includes /home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8293.441 ; gain = 0.000 ; free physical = 8243 ; free virtual = 11970
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8293.441 ; gain = 0.000 ; free physical = 8283 ; free virtual = 12010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8293.441 ; gain = 0.000 ; free physical = 8282 ; free virtual = 12009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8293.441 ; gain = 0.000 ; free physical = 8282 ; free virtual = 12009
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8293.441 ; gain = 0.000 ; free physical = 8346 ; free virtual = 12074
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 8325.449 ; gain = 0.000 ; free physical = 8240 ; free virtual = 11967
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8325.449 ; gain = 0.000 ; free physical = 8278 ; free virtual = 12005
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8325.449 ; gain = 0.000 ; free physical = 8277 ; free virtual = 12004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8325.449 ; gain = 0.000 ; free physical = 8280 ; free virtual = 12007
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8325.449 ; gain = 0.000 ; free physical = 8329 ; free virtual = 12056
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 8366.473 ; gain = 41.023 ; free physical = 8269 ; free virtual = 11996
+set_property top sp_mash111 [current_fileset]
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8462.527 ; gain = 0.000 ; free physical = 8233 ; free virtual = 11960
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+WARNING: [Synth 8-689] width (9) of port connection 'x_i' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [Synth 8-689] width (9) of port connection 'e_o' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm__parameterized0' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8462.527 ; gain = 0.000 ; free physical = 8272 ; free virtual = 12000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8462.527 ; gain = 0.000 ; free physical = 8273 ; free virtual = 12001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8462.527 ; gain = 0.000 ; free physical = 8273 ; free virtual = 12001
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8462.527 ; gain = 0.000 ; free physical = 8333 ; free virtual = 12061
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8493.531 ; gain = 0.000 ; free physical = 8212 ; free virtual = 11939
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+WARNING: [Synth 8-689] width (9) of port connection 'x_i' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [Synth 8-689] width (9) of port connection 'e_o' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm__parameterized0' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8493.531 ; gain = 0.000 ; free physical = 8247 ; free virtual = 11974
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8493.531 ; gain = 0.000 ; free physical = 8248 ; free virtual = 11976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8493.531 ; gain = 0.000 ; free physical = 8248 ; free virtual = 11975
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8498.430 ; gain = 0.000 ; free physical = 8315 ; free virtual = 12043
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 8519.441 ; gain = 25.910 ; free physical = 8261 ; free virtual = 11989
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8519.449 ; gain = 0.000 ; free physical = 8226 ; free virtual = 11954
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+WARNING: [Synth 8-689] width (9) of port connection 'x_i' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [Synth 8-689] width (9) of port connection 'e_o' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm__parameterized0' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8519.449 ; gain = 0.000 ; free physical = 8262 ; free virtual = 11990
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8519.449 ; gain = 0.000 ; free physical = 8261 ; free virtual = 11988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8519.449 ; gain = 0.000 ; free physical = 8260 ; free virtual = 11988
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8521.441 ; gain = 0.000 ; free physical = 8329 ; free virtual = 12056
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8545.453 ; gain = 26.004 ; free physical = 8254 ; free virtual = 11982
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8545.453 ; gain = 0.000 ; free physical = 8226 ; free virtual = 11954
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+WARNING: [Synth 8-689] width (9) of port connection 'x_i' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [Synth 8-689] width (9) of port connection 'e_o' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm__parameterized0' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8545.453 ; gain = 0.000 ; free physical = 8258 ; free virtual = 11986
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8545.453 ; gain = 0.000 ; free physical = 8262 ; free virtual = 11990
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8545.453 ; gain = 0.000 ; free physical = 8262 ; free virtual = 11990
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8545.453 ; gain = 0.000 ; free physical = 8326 ; free virtual = 12053
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8585.473 ; gain = 0.000 ; free physical = 8218 ; free virtual = 11946
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u0_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:119]
+WARNING: [Synth 8-7023] instance 'u0_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:119]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u1_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:130]
+WARNING: [Synth 8-7023] instance 'u1_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:130]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u2_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:141]
+WARNING: [Synth 8-7023] instance 'u2_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:141]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+WARNING: [Synth 8-689] width (9) of port connection 'x_i' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [Synth 8-689] width (9) of port connection 'e_o' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8585.473 ; gain = 0.000 ; free physical = 8255 ; free virtual = 11983
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8585.473 ; gain = 0.000 ; free physical = 8256 ; free virtual = 11984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8585.473 ; gain = 0.000 ; free physical = 8256 ; free virtual = 11984
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8585.473 ; gain = 0.000 ; free physical = 8320 ; free virtual = 12048
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ncl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5,OUT_REG=1)
+Compiling module xil_defaultlib.sp_efm(OUT_REG=1)
+Compiling module xil_defaultlib.dff_default
+Compiling module xil_defaultlib.dff(WIDTH=3)
+Compiling module xil_defaultlib.dff(WIDTH=4)
+Compiling module xil_defaultlib.ncl_default
+Compiling module xil_defaultlib.sp_mash111_default
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sp_mash111_behav -key {Behavioral:sim_1:Functional:tb_sp_mash111} -tclbatch {tb_sp_mash111.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_sp_mash111.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1ms
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 60
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_sp_mash111_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1ms
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sp_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_sp_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ncl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sp_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sp_mash111_behav xil_defaultlib.tb_sp_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'x_i' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:60]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 5 for port 'e_o' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:64]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sp_efm(WIDTH=5,OUT_REG=1)
+Compiling module xil_defaultlib.sp_efm(OUT_REG=1)
+Compiling module xil_defaultlib.dff_default
+Compiling module xil_defaultlib.dff(WIDTH=3)
+Compiling module xil_defaultlib.dff(WIDTH=4)
+Compiling module xil_defaultlib.ncl_default
+Compiling module xil_defaultlib.sp_mash111_default
+Compiling module xil_defaultlib.tb_sp_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sp_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/tb/tb_sp_mash111.v" Line 60
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8665.512 ; gain = 4.996 ; free physical = 8220 ; free virtual = 11946
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sp_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u0_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:102]
+WARNING: [Synth 8-7023] instance 'u0_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:102]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u1_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:113]
+WARNING: [Synth 8-7023] instance 'u1_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:113]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u2_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:124]
+WARNING: [Synth 8-7023] instance 'u2_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:124]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+WARNING: [Synth 8-689] width (9) of port connection 'x_i' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:46]
+WARNING: [Synth 8-689] width (9) of port connection 'e_o' does not match port width (5) of module 'sp_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:50]
+INFO: [Synth 8-6157] synthesizing module 'sp_efm__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sp_efm__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/sp_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8665.512 ; gain = 4.996 ; free physical = 8254 ; free virtual = 11979
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8665.512 ; gain = 4.996 ; free physical = 8253 ; free virtual = 11979
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8665.512 ; gain = 4.996 ; free physical = 8253 ; free virtual = 11979
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8670.516 ; gain = 0.000 ; free physical = 8316 ; free virtual = 12042
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+set_property top hk_mash111 [current_fileset]
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8851.609 ; gain = 0.000 ; free physical = 8217 ; free virtual = 11943
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hk_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u0_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:123]
+WARNING: [Synth 8-7023] instance 'u0_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:123]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u1_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:134]
+WARNING: [Synth 8-7023] instance 'u1_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:134]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u2_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:145]
+WARNING: [Synth 8-7023] instance 'u2_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:145]
+INFO: [Synth 8-6157] synthesizing module 'hk_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+	Parameter WIDTH bound to: 24 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'hk_efm' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'hk_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8851.609 ; gain = 0.000 ; free physical = 8248 ; free virtual = 11974
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8851.609 ; gain = 0.000 ; free physical = 8251 ; free virtual = 11977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8851.609 ; gain = 0.000 ; free physical = 8251 ; free virtual = 11977
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8856.605 ; gain = 0.000 ; free physical = 8309 ; free virtual = 12035
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8883.625 ; gain = 0.000 ; free physical = 8256 ; free virtual = 11982
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hk_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u0_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:103]
+WARNING: [Synth 8-7023] instance 'u0_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:103]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u1_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:114]
+WARNING: [Synth 8-7023] instance 'u1_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:114]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u2_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:125]
+WARNING: [Synth 8-7023] instance 'u2_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:125]
+INFO: [Synth 8-6157] synthesizing module 'hk_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'hk_efm' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'hk_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8883.625 ; gain = 0.000 ; free physical = 8289 ; free virtual = 12015
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8883.625 ; gain = 0.000 ; free physical = 8291 ; free virtual = 12017
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8883.625 ; gain = 0.000 ; free physical = 8291 ; free virtual = 12017
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8883.625 ; gain = 0.000 ; free physical = 8346 ; free virtual = 12072
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8915.633 ; gain = 0.000 ; free physical = 8253 ; free virtual = 11979
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hk_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'hk_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'hk_efm' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'hk_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8915.633 ; gain = 0.000 ; free physical = 8284 ; free virtual = 12010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8915.633 ; gain = 0.000 ; free physical = 8286 ; free virtual = 12012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8915.633 ; gain = 0.000 ; free physical = 8286 ; free virtual = 12012
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8915.633 ; gain = 0.000 ; free physical = 8342 ; free virtual = 12068
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 8939.645 ; gain = 24.012 ; free physical = 8296 ; free virtual = 12022
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8939.645 ; gain = 0.000 ; free physical = 8254 ; free virtual = 11981
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hk_mash111' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff' (1#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u0_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:103]
+WARNING: [Synth 8-7023] instance 'u0_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:103]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u1_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:114]
+WARNING: [Synth 8-7023] instance 'u1_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:114]
+WARNING: [Synth 8-7071] port 'Qn' of module 'dff' is unconnected for instance 'u2_dff' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:125]
+WARNING: [Synth 8-7023] instance 'u2_dff' of module 'dff' has 5 connections declared, but only 4 given [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:125]
+INFO: [Synth 8-6157] synthesizing module 'hk_efm' [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter A_GAIN bound to: 2 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'hk_efm' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ncl' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized0' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized0' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff__parameterized1' [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WITH_RST bound to: 0 - type: integer 
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dff__parameterized1' (2#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ncl' (3#1) [/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'hk_mash111' (4#1) [/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8939.645 ; gain = 0.000 ; free physical = 8284 ; free virtual = 12010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8939.645 ; gain = 0.000 ; free physical = 8284 ; free virtual = 12010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8939.645 ; gain = 0.000 ; free physical = 8284 ; free virtual = 12010
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8939.645 ; gain = 0.000 ; free physical = 8337 ; free virtual = 12063
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 8960.656 ; gain = 21.012 ; free physical = 8289 ; free virtual = 12015
+set_property top tb_hk_mash111 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hk_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_hk_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ncl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_hk_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.hk_efm(A_GAIN=2,OUT_REG=1)
+Compiling module xil_defaultlib.dff_default
+Compiling module xil_defaultlib.dff(WIDTH=3)
+Compiling module xil_defaultlib.dff(WIDTH=4)
+Compiling module xil_defaultlib.ncl_default
+Compiling module xil_defaultlib.hk_mash111(WIDTH=24)
+Compiling module xil_defaultlib.tb_hk_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_hk_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_hk_mash111_behav -key {Behavioral:sim_1:Functional:tb_hk_mash111} -tclbatch {tb_hk_mash111.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_hk_mash111.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1ms
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 62
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_hk_mash111_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1ms
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hk_mash111' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_hk_mash111_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_efm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_efm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/rtl/hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hk_mash111
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/SP-MASH-DDSM/rtl/ncl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ncl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_hk_mash111
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/EDA/vsim/Delta-Sigma-Modulator/vivado_proj/dsm.sim/sim_1/behav/xsim'
+xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3e294c28d63a485d8734db514881b626 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_hk_mash111_behav xil_defaultlib.tb_hk_mash111 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.hk_efm(WIDTH=9,A_GAIN=2,OUT_REG=...
+Compiling module xil_defaultlib.dff_default
+Compiling module xil_defaultlib.dff(WIDTH=3)
+Compiling module xil_defaultlib.dff(WIDTH=4)
+Compiling module xil_defaultlib.ncl_default
+Compiling module xil_defaultlib.hk_mash111_default
+Compiling module xil_defaultlib.tb_hk_mash111
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_hk_mash111_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 100 us : File "/home/EDA/vsim/Delta-Sigma-Modulator/HK-MASH-DDSM/tb/tb_hk_mash111.v" Line 64
