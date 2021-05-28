@@ -12,6 +12,8 @@ Delta-Sigma modulator (DSM) for fractional phase locked loop.
 ├── SP-MASH-DDSM  # SP-MASH
 │   ├── rtl
 │   └── tb
+├── PSD
+│   ├── PSD.m     # Calculate the power spectral density
 ├── LICENSE
 └── README.md
 ~~~
