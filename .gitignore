@@ -13,6 +13,7 @@
 !*.svg
 
 !*.py
+!*.m
 # !Makefile
 # !vsim.wlf
 
